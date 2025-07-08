@@ -42,7 +42,11 @@ public class crearCursos {
         String fechaFin = scanner.nextLine();
         crearCursos curso = new crearCursos(nombreCurso, descripcionCurso, fechaInicio, fechaFin);
         System.out.println("Curso creado exitosamente:");
-
+        System.out.println("Nombre del curso: " + curso.getNombreCurso());
+        System.out.println("Descripción del curso: " + curso.getDescripcionCurso());
+        System.out.println("Fecha de inicio del curso: " + curso.getFechaInicio());
+        System.out.println("Fecha de finalización del curso: " + curso.getFechaFin());
+        fin();
     }
 
     public static void fin(){
