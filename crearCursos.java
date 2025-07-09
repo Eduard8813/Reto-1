@@ -123,7 +123,7 @@ public class crearCursos {
                 System.out.println("La fecha de fin no puede estar vacio. por favor, intente de nuevo.");
                 scanner.close();
                 return;
-            }else{ 
+            }else{
             setFechaFin(valor5);
             System.out.println("--------------------------------------");
             }

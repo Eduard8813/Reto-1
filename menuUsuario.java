@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class menuUsuario {
-    Scanner scanner = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
+
     public void mostrarMenu(){
         System.out.println("--------------------------------------");
         System.out.println("Bienvenido al sistema de gestión de usuarios");
@@ -11,12 +12,13 @@ public class menuUsuario {
         System.out.println("2. Crear Usuario");
         System.out.println("3. Usuario Registrado");
         System.out.println("4. Salir");
-        int opcion = scanner.nextInt();
+
+        int opcion = sc.nextInt();
 
         switch (opcion) {
             case 1:
-                //regitrarUsuario registrar = new regitrarUsuario();
-                //registrar.registrar();
+                regitrarUsuario registro = new regitrarUsuario();
+                registro.inicio();;
 
                 break;
             case 2:
@@ -38,5 +40,4 @@ public class menuUsuario {
                 break;
             }
     }
-
 }
