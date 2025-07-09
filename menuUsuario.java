@@ -17,18 +17,20 @@ public class menuUsuario {
 
         switch (opcion) {
             case 1:
-                regitrarUsuario s1 = new regitrarUsuario();
-                s1.registrUsuarios();
+                regitrarUsuario registro = new regitrarUsuario();
+                registro.registrar();
                 mostrarMenu();
                 break;
             case 2:
-                crearCursos cursos = new crearCursos();
-                cursos.inicio();
+                crearCursos registry = new crearCursos();
+                cursos curso = registry.registrarCurso();
+                Gestorcursos gestor = new Gestorcursos();
+                gestor.guardarCurso(curso);
                 mostrarMenu();
                 break;
             case 3:
-                usuario s2 = new usuario();
-                s2.inicio();
+                GestorUsuarios visor = new GestorUsuarios();
+                visor.mostrarUsuario();
                 mostrarMenu();
                 break;
             case 4:

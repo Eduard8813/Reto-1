@@ -1,36 +1,24 @@
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.io.FileWriter;
+import java.io.IOException;
 public class regitrarUsuario {
-    
-        private String nombre;
-        private String correo;
-        private String codigo;
 
-        public ArrayList<usuario>registrUsuarios(){
-
-            ArrayList<usuario> lista = new ArrayList<>();
+        public usuario registrar(){
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("¿Cuántos usuarios vas a registrar? ");
-            int cantidad = sc.nextInt();
-            sc.nextLine();
+            System.out.print("Nombre: ");
+            String nombre = sc.nextLine();
 
-            for(int i = 0; i < cantidad; i++){
-                System.out.println("Usuario #" + (i + 1));
-                System.out.println("Ingrese el nombre");
-                nombre = sc.nextLine();
+            System.out.print("Correo: ");
+            String correo = sc.nextLine();
 
-                System.out.println("Ingrese el correo");
-                correo = sc.nextLine();
-                
-                codigo = generarCodigo();
+            String codigo = generarCodigo();
+            System.out.println("Código generado: " + codigo);
 
-                usuario u = new usuario(nombre, correo, codigo);
-                lista.add(u);
+            usuario u = new usuario(nombre, correo, codigo);
+            guardarEnArchivo(u);
 
-            }
-
-            return lista;
+        return u;
         }
 
         public String generarCodigo(){
@@ -46,5 +34,20 @@ public class regitrarUsuario {
                 codigoResultado += letra;
             }
             return codigoResultado;
+        }
+
+        private void guardarEnArchivo(usuario u){
+            try{
+                FileWriter writer = new FileWriter("Usuarios.txt", true);
+                writer.write(u.getNombre() + "," + u.getCorreo() + "," + u.getCodigo());
+                writer.close();
+            }catch(IOException e ){
+                System.out.println("Error al guardar" + e.getMessage());
+            }
+        }
+
+        public cursos registrarCurso() {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'registrarCurso'");
         }
 }
