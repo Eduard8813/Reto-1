@@ -12,9 +12,9 @@ public class menuUsuario {
         System.out.println("1. Registrar Estudiante");
         System.out.println("2. Crear Curso");
         System.out.println("3. Usuarios Registrados");
-        System.out.println("4. Cursos Registrados"); // Nueva opción
-        System.out.println("5. Inscribir Estudiante en Curso"); // Nueva opción
-        System.out.println("6. Ver Inscripciones por Modalidad"); // Nueva opción
+        System.out.println("4. Cursos Registrados"); 
+        System.out.println("5. Inscribir Estudiante en Curso"); 
+        System.out.println("6. Ver Inscripciones por Modalidad"); 
         System.out.println("7. Salir");
 
         int opcion = sc.nextInt();
@@ -38,17 +38,17 @@ public class menuUsuario {
                 visorUsuarios.mostrarUsuario();
                 mostrarMenu();
                 break;
-            case 4: // Nueva opción: Listar Cursos
+            case 4:
                 Gestorcursos gestorCursos = new Gestorcursos();
                 gestorCursos.listarCursosDisponibles();
                 mostrarMenu();
                 break;
-            case 5: // Nueva opción: Inscribir Estudiante en Curso
+            case 5: 
                 InscripcionManager inscripcionManager = new InscripcionManager();
                 inscripcionManager.inscribirEstudianteEnCurso();
                 mostrarMenu();
                 break;
-            case 6: // Nueva opción: Ver Inscripciones por Modalidad
+            case 6: 
                 InscripcionManager verInscripciones = new InscripcionManager();
                 verInscripciones.mostrarInscripcionesPorModalidad();
                 mostrarMenu();
