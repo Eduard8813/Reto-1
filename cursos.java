@@ -6,13 +6,15 @@ public class cursos {
     String duracionCurso;
     String fechaInicio;
     String fechaFin;
+    String extra;
 
-    public cursos(String nombreCurso, String descripcionCurso, String duracionCurso, String fechaInicio, String fechaFin) {
+    public cursos(String nombreCurso, String descripcionCurso, String duracionCurso, String fechaInicio, String fechaFin, String extra) {
         this.nombreCurso = nombreCurso;
         this.descripcionCurso = descripcionCurso;
         this.duracionCurso = duracionCurso;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
+        this.extra = extra;
     }
 
     public cursos(){
@@ -34,9 +36,12 @@ public class cursos {
     public String getNombreCurso() {
         return nombreCurso;
     }
+    public String getExtra() {
+        return extra;
+    }
     public String getDatos() {
         return "Nombre: " + nombreCurso + " | Descripción: " + descripcionCurso +
             " | Duración: " + duracionCurso + " meses | Inicio: " + fechaInicio +
-            " | Fin: " + fechaFin + " | ";
+            " | Fin: " + fechaFin + " Modalidad: " + extra + " | ";
     }
 }

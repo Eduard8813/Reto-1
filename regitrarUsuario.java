@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 public class regitrarUsuario {
 
-        public usuario registrar(){
+        public estudiantes registrar(){
             Scanner sc = new Scanner(System.in);
 
             System.out.print("Nombre: ");
@@ -16,7 +16,7 @@ public class regitrarUsuario {
 
             String codigo = generarCodigo();
             System.out.println("Código generado: " + codigo);
-            usuario u = new usuario(nombre, correo, codigo);
+            estudiantes u = new estudiantes(nombre, correo, codigo);
             guardarEnArchivo(u);
         return u;
         }
@@ -36,7 +36,7 @@ public class regitrarUsuario {
             return codigoResultado;
         }
 
-        private void guardarEnArchivo(usuario u){
+        private void guardarEnArchivo(estudiantes u){
             try{
                 BufferedWriter writer = new BufferedWriter(new FileWriter("Usuarios.txt", true));
                 writer.write(u.getNombre() + "," + u.getCorreo() + "," + u.getCodigo());

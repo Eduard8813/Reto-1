@@ -19,6 +19,9 @@ public class crearCursos {
         System.out.print("Fecha de fin (dd/mm/yyyy): ");
         String fin = scanner.nextLine();
         
-        return new cursos(nombre, descripcion, duracion, inicio, fin);
+        System.out.print("Modabilidad: ");
+        String extra = scanner.nextLine();
+        
+        return new cursos(nombre, descripcion, duracion, inicio, fin, extra);
     }
 }

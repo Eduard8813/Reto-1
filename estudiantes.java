@@ -1,10 +1,10 @@
 
-public class usuario {
+public class estudiantes {
     private String nombre;
     private String correo;
     private String codigo;
 
-    public usuario(String nombre, String correo, String codigo){
+    public estudiantes(String nombre, String correo, String codigo){
         this.nombre = nombre;
         this.correo = correo;
         this.codigo = codigo;

@@ -1,2 +1,2 @@
-Nombre: Electronica | Descripción: Componentes | Duración: 12 meses | Inicio: 20-20-2025 | Fin: 20-20-2025
-Nombre: Maquina | Descripción: motores | Duración:  meses | Inicio: 12/2/2 | Fin: 2/45/6 | 
+Nombre: Electronica | Descripción: Componente | Duración: 1 meses | Inicio: 20/2/2025 | Fin: 20/5/2025 Modalidad: Presencial | 
+Nombre: Electronica | Descripción: Control de motores | Duración: 2 meses | Inicio: 2/02/2025 | Fin: 4/05/2025 Modalidad: virtual | 
