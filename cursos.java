@@ -42,6 +42,6 @@ public class cursos {
     public String getDatos() {
         return "Nombre: " + nombreCurso + " | Descripción: " + descripcionCurso +
             " | Duración: " + duracionCurso + " meses | Inicio: " + fechaInicio +
-            " | Fin: " + fechaFin + " Modalidad: " + extra + " | ";
+            " | Fin: " + fechaFin + " | Modalidad: " + extra + " | ";
     }
 }

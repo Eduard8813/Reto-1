@@ -23,7 +23,13 @@ public class Gestorcursos {
         try (BufferedReader reader = new BufferedReader(new FileReader("cursos.txt"))) {
             String linea;
             while ((linea = reader.readLine()) != null) {
+                
+                System.out.println("Leyendo lineas " + linea);
                 String[] partes = linea.split(" \\| ");
+                System.out.println("Número de partes: " + partes.length);
+                for (int i = 0; i < partes.length; i++) {
+                    System.out.println("Parte " + i + ": " + partes[i]); 
+                }
                 if (partes.length >= 6) {
                     String nombre = partes[0].replace("Nombre: ", "").trim();
                     String descripcion = partes[1].replace("Descripción: ", "").trim();
