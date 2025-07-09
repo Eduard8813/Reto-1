@@ -17,17 +17,16 @@ public class menuUsuario {
 
         switch (opcion) {
             case 1:
-                regitrarUsuario registro = new regitrarUsuario();
-                registro.inicio();;
-
+                regitrarUsuario s1 = new regitrarUsuario();
+                s1.registrUsuarios();
                 break;
             case 2:
                 crearCursos cursos = new crearCursos();
                 cursos.inicio();
                 break;
             case 3:
-                usuarioRegistrado usuario = new usuarioRegistrado();
-                usuario.registro();
+                usuario s2 = new usuario();
+                s2.imprimir();
                 break;
             case 4:
                 System.out.println("Saliendo del sistema...");
