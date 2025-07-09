@@ -8,9 +8,9 @@ public class menuUsuario {
         System.out.println("Bienvenido al sistema de gestión de usuarios");
         System.out.println("--------------------------------------");
         System.out.println("Seleccione una opción:");
-        System.out.println("1. Registrar usuario");
-        System.out.println("2. Crear Usuario");
-        System.out.println("3. Usuario Registrado");
+        System.out.println("1. Registrar Estudiante");
+        System.out.println("2. Crear Curos");
+        System.out.println("3. Usuarios Registrados");
         System.out.println("4. Salir");
 
         int opcion = sc.nextInt();
@@ -26,9 +26,8 @@ public class menuUsuario {
                 cursos.inicio();
                 break;
             case 3:
-                //usuarioRegistrado usuario = new usuarioRegistrado();
-                //usuario.mostrarUsuario();
-                System.out.println("Funcionalidad de mostrar usuario no implementada.");
+                usuarioRegistrado usuario = new usuarioRegistrado();
+                usuario.registro();
                 break;
             case 4:
                 System.out.println("Saliendo del sistema...");

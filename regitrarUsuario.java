@@ -1,15 +1,16 @@
 import java.util.Scanner;
 public class regitrarUsuario {
+    
+        private String nombre;
+        private String apellido;
+        private String edad;
+        private String codigo;
 
-        String nombre;
-        String apellido;
-        String edad;
-        String codigo;
-
-        public regitrarUsuario(String nombre, String apellido, String edad){
+        public regitrarUsuario(String nombre, String apellido, String edad, String codigo){
             this.nombre = nombre;
             this.apellido = apellido;
             this.edad = apellido;
+            this.codigo = codigo;
         }
         
         public regitrarUsuario(){
@@ -36,11 +37,17 @@ public class regitrarUsuario {
         public void setCodigo(String codigo) {
             this.codigo = codigo;
         }
+
+        public String enviar(){
+            return nombre + apellido + edad + codigo;
+        }
         
         void control(){
             if(nombre != null && !nombre.isEmpty() || apellido != null && !nombre.isEmpty() || edad != null && !edad.isEmpty()){
                 System.out.println("Datos registrado correctamente");
-                generarCodigo();
+                mostrarDato();
+                menuUsuario retorno = new menuUsuario();
+                retorno.mostrarMenu();
             }else{
                 System.out.println("Datos no registrado correctamente, intentelo de nuevo");
             }
@@ -59,7 +66,6 @@ public class regitrarUsuario {
                 codigoResultado += letra;
             }
             setCodigo(codigoResultado);
-            System.out.println(codigoResultado);
         }
 
 
@@ -87,18 +93,24 @@ public class regitrarUsuario {
                 setApellido(valor2);
             }
 
-            System.out.println("Ingresa tu edad");
+            System.out.println("Ingrese su edad");
             String valor3 = scanner.nextLine();
             if(valor3.isEmpty()){
                 System.out.println("La edad esta vacio, intentelo de nuevo<");
                 scanner.close();
                 return;
+            }else{
+                setEdad(valor3);
             }
+            generarCodigo();
             control();
             scanner.close();
         }
 
-        void scanner(){
-            
+        void mostrarDato(){
+            System.out.println("Nombre: " + nombre);
+            System.out.println("Apellido: " + apellido);
+            System.out.println("Edad: " + edad);
+            System.out.println("Codigo: " + codigo);
         }
 }
