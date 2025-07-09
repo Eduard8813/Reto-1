@@ -21,12 +21,6 @@ public class usuario {
     }
 
     public String getinfo(){
-        if(nombre.isEmpty() || correo.isEmpty() || codigo.isEmpty()){
-        return "Nombre: " + nombre + " | Correo: " + correo + " | Código: " + codigo;
-        }else{
-            System.out.println("Hay campos vacios.");
-        }
-
-        return getinfo();
+        return "Nombre: " + nombre + " | Correo: " + correo + " | Código: " + codigo + "  |  ";
     }
 }

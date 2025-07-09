@@ -1,1 +1,2 @@
-Nombre: Electronica | Descripción: Componentes electronicos | Duración: 12 meses | Inicio: 20/02/2025 | Fin: 25/05/2025
+Nombre: Electronica | Descripción: Componentes | Duración: 12 meses | Inicio: 20-20-2025 | Fin: 20-20-2025
+Nombre: Maquina | Descripción: motores | Duración:  meses | Inicio: 12/2/2 | Fin: 2/45/6 | 

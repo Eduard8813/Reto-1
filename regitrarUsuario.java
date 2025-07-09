@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 public class regitrarUsuario {
@@ -14,15 +16,9 @@ public class regitrarUsuario {
 
             String codigo = generarCodigo();
             System.out.println("Código generado: " + codigo);
-            if(nombre.isEmpty() || correo.isEmpty() || codigo.isEmpty()){
             usuario u = new usuario(nombre, correo, codigo);
             guardarEnArchivo(u);
         return u;
-            }else{
-                System.out.println("Hay campos vacios");
-            }
-
-            return registrar();
         }
 
         public String generarCodigo(){
@@ -42,8 +38,9 @@ public class regitrarUsuario {
 
         private void guardarEnArchivo(usuario u){
             try{
-                FileWriter writer = new FileWriter("Usuarios.txt", true);
+                BufferedWriter writer = new BufferedWriter(new FileWriter("Usuarios.txt", true));
                 writer.write(u.getNombre() + "," + u.getCorreo() + "," + u.getCodigo());
+                writer.newLine();
                 writer.close();
             }catch(IOException e ){
                 System.out.println("Error al guardar" + e.getMessage());

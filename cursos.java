@@ -35,13 +35,8 @@ public class cursos {
         return nombreCurso;
     }
     public String getDatos() {
-        if(nombreCurso.isEmpty() || descripcionCurso.isEmpty() || duracionCurso.isEmpty() || fechaFin.isEmpty() || fechaInicio.isEmpty()){
         return "Nombre: " + nombreCurso + " | Descripción: " + descripcionCurso +
             " | Duración: " + duracionCurso + " meses | Inicio: " + fechaInicio +
-            " | Fin: " + fechaFin;
-        }else{
-            System.out.println("Hay campos vacios.");
-        }
-        return getDatos();
+            " | Fin: " + fechaFin + " | ";
     }
 }
