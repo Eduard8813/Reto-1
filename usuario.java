@@ -1,41 +1,49 @@
+import java.util.ArrayList;
+
 public class usuario {
     private String nombre;
-    private String apellido;
-    private String edad;
+    private String correo;
     private String codigo;
 
-    public usuario(String nombre, String apellido, String edad, String codigo){
+    public usuario(String nombre, String correo, String codigo){
         this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
+        this.correo = correo;
         this.codigo = codigo;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-    public String getCodigo() {
-        return codigo;
-    }
-    public String getEdad() {
-        return edad;
+    public String getCorreo() {
+        return correo;
     }
     public String getNombre() {
         return nombre;
     }
-
+    public String getCodigo() {
+        return codigo;
+    }
     public usuario(){
 
     }
 
-    public String getinfo(){
-        return nombre + apellido + edad + codigo;
+    void inicio(){
+        System.out.println("Bienvenido al sistema de gestion de usuarios registrados");
+        camposlleno();
     }
 
-    void imprimir(){
-        System.out.println("Datos: " + getNombre());
-        System.out.println("Datos: " + getApellido());
-        System.out.println("Datos: " + getCodigo());
-        System.out.println("Datos: " + getEdad());
+    void camposlleno(){
+        if(nombre != null && !nombre.isEmpty() && codigo != null && !codigo.isEmpty() && correo != null && !correo.isEmpty()){
+                System.out.println("Muesta de estudiantes registrado");
+                System.out.println("--------------------------------------");
+                GestorUsuarios gestor = new GestorUsuarios();
+                ArrayList<usuario>lista = gestor.getUsuarios();
+                System.out.println(" Datos mostrados desde clase usuario:");
+                for (usuario u : lista) {
+                    System.out.println("Nombre: " + u.getNombre());
+                    System.out.println("Correo: " + u.getCorreo());
+                    System.out.println("Código: " + u.getCodigo());
+                }
+                System.out.println("--------------------------------------");
+            }else{
+                System.out.println("No hay estudiantes registrados.");
+            }
     }
 }

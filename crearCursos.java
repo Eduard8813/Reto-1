@@ -77,7 +77,6 @@ public class crearCursos {
             String valor1 = scanner.nextLine();
             if(valor1.isEmpty()) {
                 System.out.println("El nombre del curso no puede estar vacío. Por favor, intente de nuevo.");
-                scanner.close();
                 return;
             }else{
             setNombreCurso(valor1);
@@ -88,7 +87,6 @@ public class crearCursos {
             String valor2 = scanner.nextLine();
             if(valor2.isEmpty()){
                 System.out.println("La descripcion del curso no puede estar vacio. por favor, intente de nuevo.");
-                scanner.close();
                 return;
             }else{
             setDescripcionCurso(valor2);
@@ -99,7 +97,6 @@ public class crearCursos {
             String valor3 = scanner.nextLine();
             if(valor3.isEmpty()){
                 System.out.println("La duracion del curso no puede estar vacio. por favor, intente de nuevo.");
-                scanner.close();
                 return;
             }else{
             setDuracionCurso(valor3);
@@ -110,7 +107,6 @@ public class crearCursos {
             String valor4 = scanner.nextLine();
             if(valor4.isEmpty()){
                 System.err.println("La fecha de inicio no puede estar vacion. por favor, intente de nuevo.");
-                scanner.close();
                 return;
             }else{ 
             setFechaInicio(valor4);
@@ -121,7 +117,6 @@ public class crearCursos {
             String valor5 = scanner.nextLine();
             if (valor5.isEmpty()) {
                 System.out.println("La fecha de fin no puede estar vacio. por favor, intente de nuevo.");
-                scanner.close();
                 return;
             }else{
             setFechaFin(valor5);

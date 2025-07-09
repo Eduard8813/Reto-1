@@ -2,7 +2,12 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class regitrarUsuario {
     
+        private String nombre;
+        private String correo;
+        private String codigo;
+
         public ArrayList<usuario>registrUsuarios(){
+
             ArrayList<usuario> lista = new ArrayList<>();
             Scanner sc = new Scanner(System.in);
 
@@ -13,26 +18,23 @@ public class regitrarUsuario {
             for(int i = 0; i < cantidad; i++){
                 System.out.println("Usuario #" + (i + 1));
                 System.out.println("Ingrese el nombre");
-                String nombre = sc.nextLine();
+                nombre = sc.nextLine();
 
-                System.out.println("Ingrese el apellido");
-                String apellido = sc.nextLine();
+                System.out.println("Ingrese el correo");
+                correo = sc.nextLine();
+                
+                codigo = generarCodigo();
 
-                System.out.println("Ingrese su edad");
-                String edad = sc.nextLine();
-
-                generarCodigo();
-                String codigo = generarCodigo();
-
-                usuario u = new usuario(nombre, apellido, edad, codigo);
+                usuario u = new usuario(nombre, correo, codigo);
                 lista.add(u);
+
             }
-            sc.close();
+
             return lista;
         }
 
         public String generarCodigo(){
-            String codigoResultado = " ";
+            String codigoResultado = "";
 
             for(int i = 0; i < 4 ; i++){
                 int numero = (int)(Math.random() * 10);
@@ -40,10 +42,9 @@ public class regitrarUsuario {
             }
 
             for(int i = 0;i < 2; i++){
-                char letra = (char)(Math.random() * 26);
+                char letra = (char)('A' + (int)(Math.random() * 26));
                 codigoResultado += letra;
             }
             return codigoResultado;
         }
-
 }

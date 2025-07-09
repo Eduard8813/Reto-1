@@ -19,14 +19,17 @@ public class menuUsuario {
             case 1:
                 regitrarUsuario s1 = new regitrarUsuario();
                 s1.registrUsuarios();
+                mostrarMenu();
                 break;
             case 2:
                 crearCursos cursos = new crearCursos();
                 cursos.inicio();
+                mostrarMenu();
                 break;
             case 3:
                 usuario s2 = new usuario();
-                s2.imprimir();
+                s2.inicio();
+                mostrarMenu();
                 break;
             case 4:
                 System.out.println("Saliendo del sistema...");
