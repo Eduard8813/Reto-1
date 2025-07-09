@@ -1,3 +1,4 @@
+// FileName: MultipleFiles/menuUsuario.java
 import java.util.Scanner;
 
 public class menuUsuario {
@@ -5,15 +6,19 @@ public class menuUsuario {
 
     public void mostrarMenu(){
         System.out.println("--------------------------------------");
-        System.out.println("Bienvenido al sistema de gestión de usuarios");
+        System.out.println("Bienvenido al sistema de gestión de usuarios y cursos");
         System.out.println("--------------------------------------");
         System.out.println("Seleccione una opción:");
         System.out.println("1. Registrar Estudiante");
-        System.out.println("2. Crear Curos");
+        System.out.println("2. Crear Curso");
         System.out.println("3. Usuarios Registrados");
-        System.out.println("4. Salir");
+        System.out.println("4. Cursos Registrados"); // Nueva opción
+        System.out.println("5. Inscribir Estudiante en Curso"); // Nueva opción
+        System.out.println("6. Ver Inscripciones por Modalidad"); // Nueva opción
+        System.out.println("7. Salir");
 
         int opcion = sc.nextInt();
+        sc.nextLine(); // Consumir el salto de línea después de leer el entero
 
         switch (opcion) {
             case 1:
@@ -29,11 +34,26 @@ public class menuUsuario {
                 mostrarMenu();
                 break;
             case 3:
-                GestorUsuarios visor = new GestorUsuarios();
-                visor.mostrarUsuario();
+                GestorUsuarios visorUsuarios = new GestorUsuarios();
+                visorUsuarios.mostrarUsuario();
                 mostrarMenu();
                 break;
-            case 4:
+            case 4: // Nueva opción: Listar Cursos
+                Gestorcursos gestorCursos = new Gestorcursos();
+                gestorCursos.listarCursosDisponibles();
+                mostrarMenu();
+                break;
+            case 5: // Nueva opción: Inscribir Estudiante en Curso
+                InscripcionManager inscripcionManager = new InscripcionManager();
+                inscripcionManager.inscribirEstudianteEnCurso();
+                mostrarMenu();
+                break;
+            case 6: // Nueva opción: Ver Inscripciones por Modalidad
+                InscripcionManager verInscripciones = new InscripcionManager();
+                verInscripciones.mostrarInscripcionesPorModalidad();
+                mostrarMenu();
+                break;
+            case 7:
                 System.out.println("Saliendo del sistema...");
                 System.exit(0);
                 break;
