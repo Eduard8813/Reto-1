@@ -18,7 +18,13 @@ public class crearCursos {
 
         System.out.print("Fecha de fin (dd/mm/yyyy): ");
         String fin = scanner.nextLine();
-
+        
+        if(nombre.isEmpty() || descripcion.isEmpty() || duracion.isEmpty() || duracion.isEmpty() || inicio.isEmpty() || fin.isEmpty()){
         return new cursos(nombre, descripcion, duracion, inicio, fin);
+        }else{
+            System.out.println("Hay campos vacios");
+        }
+
+        return registrarCurso();
     }
 }

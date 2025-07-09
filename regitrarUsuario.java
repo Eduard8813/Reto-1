@@ -14,11 +14,15 @@ public class regitrarUsuario {
 
             String codigo = generarCodigo();
             System.out.println("Código generado: " + codigo);
-
+            if(nombre.isEmpty() || correo.isEmpty() || codigo.isEmpty()){
             usuario u = new usuario(nombre, correo, codigo);
             guardarEnArchivo(u);
-
         return u;
+            }else{
+                System.out.println("Hay campos vacios");
+            }
+
+            return registrar();
         }
 
         public String generarCodigo(){
@@ -44,10 +48,5 @@ public class regitrarUsuario {
             }catch(IOException e ){
                 System.out.println("Error al guardar" + e.getMessage());
             }
-        }
-
-        public cursos registrarCurso() {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'registrarCurso'");
         }
 }
