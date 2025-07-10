@@ -1,4 +1,4 @@
-// FileName: MultipleFiles/InscripcionManager.java
+// Este archivo es parte de un sistema de gestión de inscripciones para cursos educativos.
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;

@@ -1,3 +1,5 @@
+//Gestionar cursos y estudiantes en un sistema educativo
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;

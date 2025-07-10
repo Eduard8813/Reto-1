@@ -1,3 +1,4 @@
+//Para registrar estudiantes en un curso.
 
 public class estudiantes {
     private String nombre;

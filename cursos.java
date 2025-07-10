@@ -1,4 +1,4 @@
-
+//Para crear un curso.
 public class cursos {
 
     String nombreCurso;

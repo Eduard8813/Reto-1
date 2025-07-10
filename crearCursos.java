@@ -1,3 +1,4 @@
+//Controlar de excepciones y manejo de entradas del usuario para registrar un curso
 import java.util.Scanner;
 
 public class crearCursos {

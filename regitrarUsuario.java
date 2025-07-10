@@ -1,3 +1,5 @@
+//Este archivo es parte de registro de usuarios en un sistema educativo.
+
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
