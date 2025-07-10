@@ -1,2 +1,3 @@
 Estudiante: Steven  | Correo: Steven@gmail.com | Código: 7039TX | Curso: Electronica | Modalidad: Presencial
-Estudiante: Steven  | Correo: Steven@gmail.com | Código: 7039TX | Curso: Electronica | Modalidad: Presencial
+Estudiante: Stuart | Correo: Stuart@gmail.com | Código: 9099JD | Curso: Electronica | Modalidad: Presencial
+Estudiante: Maritza | Correo: Maritza@gmail.com | Código: 5126ON | Curso: Electronica | Modalidad: Presencial

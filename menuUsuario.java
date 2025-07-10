@@ -44,12 +44,12 @@ public class menuUsuario {
                 mostrarMenu();
                 break;
             case 5: 
-                InscripcionManager inscripcionManager = new InscripcionManager();
+                InscripcionesManager inscripcionManager = new InscripcionesManager();
                 inscripcionManager.inscribirEstudianteEnCurso();
                 mostrarMenu();
                 break;
             case 6: 
-                InscripcionManager verInscripciones = new InscripcionManager();
+                InscripcionesManager verInscripciones = new InscripcionesManager();
                 verInscripciones.mostrarInscripcionesPorModalidad();
                 mostrarMenu();
                 break;

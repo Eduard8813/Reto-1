@@ -1,3 +1,2 @@
-Nombre: Electronica | Descripción: Componentes electronicos | Duración: 12 meses | Inicio: 20/02/2025 | Fin: 25/05/2025
-Nombre: Electronica | Descripción: Compontentes | Duración: 1 meses | Inicio: 01/2/2025 | Fin: 10/03/2025
-Nombre: Electronica | Descripción: Maquinas | Duración: 1 meses | Inicio: 20/2/2025 | Fin: 20/5/2025 | Modalidad: Presencial | 
+Nombre: Electronica | Descripción: Maquinas | Duración: 1 meses | Inicio: 20/2/2025 | Fin: 20/5/2025 | Modalidad: Presencial |
+Nombre: Sistema | Descripción: computadoras | Duración: 1 meses | Inicio: 20-2-2025 | Fin: 20-3-2025 | Modalidad: Virtual | 
